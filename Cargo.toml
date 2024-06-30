@@ -26,3 +26,7 @@ features = ["spin_no_std"]
 
 [profile.release]
 panic = "abort"
+
+[[test]]
+name = "stack_overflow"
+harness = false
