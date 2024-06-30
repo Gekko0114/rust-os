@@ -3,8 +3,8 @@
 #![feature(abi_x86_interrupt)]
 
 use core::panic::PanicInfo;
-use rust_os::{serial_print, serial_println, QemuExitCode, exit_qemu};
 use lazy_static::lazy_static;
+use rust_os::{exit_qemu, serial_print, serial_println, QemuExitCode};
 use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame};
 
 #[no_mangle]
@@ -14,7 +14,7 @@ pub extern "C" fn _start() -> ! {
     init_test_idt();
 
     stack_overflow();
-    
+
     panic!("Execution continued after stack overflow");
 }
 
