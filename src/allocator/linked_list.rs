@@ -1,5 +1,3 @@
-use alloc::collections::LinkedList;
-
 use super::{align_up, Locked};
 use alloc::alloc::{GlobalAlloc, Layout};
 use core::{mem, ptr};
